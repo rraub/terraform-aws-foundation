@@ -285,11 +285,11 @@ data "aws_iam_policy_document" "source_policy" {
 }
 
 data "aws_iam_policy_document" "master-node-role" {
-  source_policy_json = "${data.aws_iam_policy_document.source_policy.json}"
+  policy_json = "${data.aws_iam_policy_document.source_policy.json}"
 }
 
 data "aws_iam_policy_document" "data-node-role" {
-  source_policy_json = "${data.aws_iam_policy_document.source_policy.json}"
+  policy_json = "${data.aws_iam_policy_document.source_policy.json}"
 }
 
 data "aws_iam_policy_document" "ec2-discovery-policy" {
